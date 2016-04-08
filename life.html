@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/plugins.css">
+	<!-- <script src="js/jquery-2.1.1.min.js"></script> -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="siderbar col-md-2 hidden-sm hidden-xs">
+				<div class="log">
+					<a href="index.php"><span class="glyphicon glyphicon-user " aria-hidden="true"></span></a><h3>Procjh</h3>
+				</div>
+				<div class="sideItem">
+					<div class="imgItem "><img src="image/mission.png" alt=""></img></div>
+					<div class="titleItem ">
+						<a href="easy.html" class="title"><h3>easy</h3></a>
+						<p>This is my easy</p>
+					</div>
+				</div>
+				<div class="sideItem">
+					<div class="imgItem "><img src="image/play.png" alt=""></img></div>
+					<div class="titleItem ">
+						<a href="life.html" class="title"><h3>picture</h3></a>
+						<p>This is my pictures</p>
+					</div>
+				</div>
+				<div class="sideItem">
+					<div class="imgItem "><img src="image/touch.png" alt=""></img></div>
+					<div class="titleItem ">
+						<a href="http://resume.supercjh.com" class="title"><h3>resume</h3></a>
+						<p>Let's do something together</p>
+					</div>
+				</div>
+				<div class="sider-footer">
+					<ul class="nav nav-pills">
+						<li>
+							<a href="https://github.com/settings/profile" class="active"><span class="fa fa-github fa-lg" ></span></a>
+						</li>
+						<li>
+							<a href="http://user.qzone.qq.com/911159490/main"  class="active"><span class="fa fa-qq fa-lg" ></span></a>
+						</li>
+						<li>
+							<a href="javascript:void()"  class="active" id="weixin">
+							 	<span class="fa fa-weixin fa-lg" ></span>
+								<div class="weixin hidden">
+									<img src="image/me.png"></img>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="https://plus.google.com/112720949505892261683/posts"  class="active"><span class="fa fa-google-plus fa-lg" ></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="page-content col-md-offset-2">
+				<div class="pageTop">
+					<div class="topButton">
+						<span class="fa fa-bars fa-fw"></span>
+					</div>
+					<div class="search-box">
+						<form method="post" action="" role="search" class="search-form">
+							<input type="text"/ placeholder="Search..." class="search-input">
+						</form>
+					</div> 
+				</div>
+				<div class="title-center">
+					<h2>Picture Show </h2>
+				</div>
+				<div class="container-fluid">
+					<div class="row imgBox">
+						<img class="pic pic1" src="image/images/1.jpg" alt=""></img>
+						<img class="pic pic2" src="image/images/2.jpg" alt=""></img>
+						<img class="pic pic3" src="image/images/3.jpg" alt=""></img>
+						<img class="pic pic4" src="image/images/4.jpg" alt=""></img>
+						<img class="pic pic5" src="image/images/5.jpg" alt=""></img>
+						<img class="pic pic6" src="image/images/6.jpg" alt=""></img>
+						<img class="pic pic7" src="image/images/7.jpg" alt=""></img>
+						<img class="pic pic8" src="image/images/8.jpg" alt=""></img>
+						<img class="pic pic9" src="image/images/9.jpg" alt=""></img>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		$(".topButton").click(function(){
+			if($(".siderbar").hasClass('hidden')){
+				$(".siderbar").removeClass('hidden');
+				$(".page-content").removeClass('col-md-8');
+				$('.easyArea').css('margin-left','-15px');
+			}else{
+				$(".siderbar").addClass('hidden');
+				$(".page-content").addClass('col-md-8 ');
+				$('.easyArea').css('margin-left','15px');
+				
+			}
+		});
+		$(".show").click(function(){
+			// var text = this.parent().siblings().children().value();
+			// alert(text);
+			if($(this).parent().prev('div').find('div').hasClass('hidden')){
+				$(this).parent().prev('div').find('div').removeClass('hidden');
+				$(this).text("close");
+			}else{
+				$(this).parent().prev('div').find('div').addClass('hidden');
+				$(this).text("show");
+			}
+		});
+		$('#weixin').click(function(){
+			if($(this).find('div').hasClass('hidden')){
+				$('.weixin').removeClass('hidden');
+			}else{
+				$('.weixin').addClass('hidden');
+			}
+			
+		});
+	})
+</script>
+</html>

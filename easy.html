@@ -1,0 +1,622 @@
+<!DOCTYPE THML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/plugins.css">
+	<!-- <script src="js/jquery-2.1.1.min.js"></script> -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="siderbar col-md-2 hidden-sm hidden-xs">
+				<div class="log">
+					<a href="index.php"><span class="glyphicon glyphicon-user " aria-hidden="true"></span></a><h3>Procjh</h3>
+				</div>
+				<div class="sideItem">
+					<div class="imgItem "><img src="image/mission.png" alt=""></img></div>
+					<div class="titleItem ">
+						<a href="easy.html" class="title"><h3>easy</h3></a>
+						<p>This is my easy</p>
+					</div>
+				</div>
+				<div class="sideItem">
+					<div class="imgItem "><img src="image/play.png" alt=""></img></div>
+					<div class="titleItem ">
+						<a href="life.html" class="title"><h3>picture</h3></a>
+						<p>This is my pictures</p>
+					</div>
+				</div>
+				<div class="sideItem">
+					<div class="imgItem "><img src="image/touch.png" alt=""></img></div>
+					<div class="titleItem ">
+						<a href="http://resume.supercjh.com" class="title"><h3>resume</h3></a>
+						<p>Let's do something together</p>
+					</div>
+				</div>
+				<div class="sider-footer">
+					<ul class="nav nav-pills">
+						<li>
+							<a href="https://github.com/settings/profile" class="active"><span class="fa fa-github fa-lg" ></span></a>
+						</li>
+						<li>
+							<a href="http://user.qzone.qq.com/911159490/main"  class="active"><span class="fa fa-qq fa-lg" ></span></a>
+						</li>
+						<li>
+							<a href="javascript:void()"  class="active" id="weixin">
+							 	<span class="fa fa-weixin fa-lg" ></span>
+								<div class="weixin hidden">
+									<img src="image/me.png"></img>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="https://plus.google.com/112720949505892261683/posts"  class="active"><span class="fa fa-google-plus fa-lg" ></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class=" page-content col-md-offset-2">
+				<div class="pageTop">
+					<div class="topButton">
+						<span class="fa fa-bars fa-fw"></span>
+					</div>
+					<div class="search-box">
+						<form method="post" action="" role="search" class="search-form">
+							<input type="text"/ placeholder="Search..." class="search-input">
+						</form>
+					</div> 
+				</div>
+				<div class="main-content ">
+					<div class="contentItem">
+						<div class="numArea">
+							<span>7</span>
+						</div>
+						<!-- <span class="dateLine"></span> -->
+						<div class="easyArea">
+							<h3>git</h3>
+							<p class="detail">git相关命令</p>
+							<div class="summary">这里是文章的smarry简介。获取文章的中心意思。抓住别人，促使去看文章
+								<div class="textArea hidden">
+									<p>
+<pre>
+1.安装：Windows下安装git：git->git bash ;
+git config --global user.name "Your  Name" 
+git config --global user.email "email@example.com"
+
+
+2.创建版本库：创建一个新目录；在目录下git bash命令框git init 初始化（.git）;将文       
+                     件放进repositories（仓库）git add "file"  git commit -m "注释"
+
+
+3.修改文件：查看当前状态  git status       查看文件改动 git diff "file"
+                  
+
+4.版本回退：查看历史 git log     简化信息 --pretty=oneline   
+ （当前版本HEAD   上一版本HEAD^   上上版本HEAD^^   往上100版本           HEAD~100） 
+回退上一版本：git reset --hard HEAD^（也可写版本ID git reset --hard 3628164） 
+ 记录命名 git reflog
+
+
+5.工作区和暂存区： working dirctory ->License->repository
+
+
+6.管理修改：查看当前版本与仓库版本不同：git diff HEAD -- "文件"
+不add到暂存区就不会commit到仓库中
+
+
+7.撤销修改：修改后没放到暂存区  git checkout 
+ 修改后放到了暂存区  git reset HEAD file 把暂存区的修改撤销掉（unstage）
+                                git checkout 
+
+
+8.删除文件：删除版本库中文件git rm file       git commit -m "remove file "
+误删后恢复（从版本库还原或替换）git checkout -- file
+
+9.远程仓库： 一. 创建 ssh key   ：ssh-keygen -t  rsa -C“YourEmail”
+二。登录github   Add ssh key 进行匹配
+
+10.添加远程库:一。本地库推送  git remote add origin  htttps://github.com/your name/learngit.git
+git push -u origin master（master 代表分支）
+以后只要本地做了修改，只要git push origin master即可 ，远程同步
+二。远程克隆：git clone htttps://github.com/your name/learngit.git
+
+
+11.创建并合并分支：git checkout -b  分支（branch）（git branch dev  , git checkout dev ）
+git branch  查看当前分支
+git add file     git  commit -m ""  分支完成之后提交
+切回到master分支再合并dev   git checkout  master      git merge dev  合并之后删除分支dev   git branch -d  dev  
+
+
+12.解决冲突：手动解决 打开文件手动解决再提交再删除分支
+查看分支合并情况 git log
+
+
+13.分支管理策略：禁止快速合并情况（fast forward）git merge --no-ff -m "merge with no-ff" dev
+
+
+14.bug分支：储存当前工作git stash
+查询当前储存的工作 git stash  list
+恢复工作区git stash apply  但是没有删除stash用git stash drop删除
+恢复工作区 git stash pop 删除了trash
+恢复指定stash   git stash apply stash@{  ID号}
+
+15.Feature分支 : 当没有合并的分支要删除时就需要git branch -D dev
+
+
+16.多人协作 ： 获取远程库信息： git remote或者git remote -v
+创建远程origin的dev分支到本地 ： 克隆之后 git checkout -b dev origin/dev
+最新提交和你试图推送提交有冲突：本地与远程建立连接 git branch --set-upstream dev origin/dev  ，  抓取新的提交 git pull ,合并冲突，提交，push
+
+
+17.创建标签：git tag （git  tag  v1.0）
+查看标签 git tag
+找到历史提交id    git log --pretty=oneline --abbrev-commit
+对应ID打标签 git tag v1.0 200245
+查看标签信息 git show 
+用私钥签名一个标签 git tag -s v0.2 -m "signed version 0.2 released" fec145a  签名采用PGP签名，因此，必须首先安装gpg（GnuPG），如果没有找到gpg，或者没有gpg密钥对，就会报错
+
+
+18.操作标签： 删除标签 git tag -d v1.0
+推送某个标签到远程，使用命令git push origin 
+一次性推送全部尚未推送到远程的本地标签：git push origin --tags
+删除远程标签：git tag -d 《atgname》再git push origin  :refs/tags/v0.9
+
+
+19.自定义git：让git显示颜色git config --global color.ui true
+
+
+20.配置别名：git config --global alias.st status  以后st就表示status
+git config --global alias.lg "log 
+
+
+学习git的教程网站http://http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+</pre>
+									</p>
+								</div>
+							</div>
+							<div class="buttonArea">
+								<!-- <button type="button" class="pull-left btn btn-success"><span class="glyphicon glyphicon-comment"></span></button> -->
+								<button type="button" class=" btn btn-primary show">show</button>
+							</div>
+							
+						</div>
+						<div class="dataArea ">
+							<span></span>
+							<h3>2016.3.22</h3>
+							<p>git</p>
+						</div>
+					</div>
+					<div class="contentItem">
+						<div class="numArea">
+							<span>7</span>
+						</div>
+						<!-- <span class="dateLine"></span> -->
+						<div class="easyArea">
+							<h3>mysql</h3>
+							<p class="detail">mysql常用命令</p>
+							<div class="summary">
+								mysql常用命令大全。慕课网学习mysql ，个人笔记。
+								<div class="textArea hidden">
+									<p>
+<pre>
+net start mysql ;//windows下开启mysql服务
+net stop mysql ;//windows下 停止mysql服务
+mysql -u root -p pwd -h 127.0.0.1;//登录数据库
+prompt \u \h \d \D;//修改提示符：用户名 主机地址 数据库 时间
+SELECT DATABASE();//显示当前数据库
+SELECT NOW();//显示现在时间
+SELECT USER();//显示mysql登录用户
+SELECT VERSION();//显示mysql版本
+SHOW DATABASES;//显示所用的数据库
+SHOW WARNINGS;//显示警告信息
+SHOW CREATE DATABASE t1;//显示建立数据库信息；
+CREATE DATABASE [IF NOT EXISTS]/[IF EXSITS] t1;//创建数据库t1;
+ALTER DATABASE t1 CHARACTER SET utf8;//更新数据库设置编码
+USE t1;//使用数据t1;
+CREATE TABLE [IF NOT EXISTS]/[IF EXISTS] table_name(column_name int ,name varchar(20));
+SHOW TABLES;//查看数据表
+SHOW TABLES FROM mysql；//显示所选数据库中的数据表;
+SHOW COLUMNS FROM tb1；//显示数据表的结构
+SHOW CREATE TABLE tb1;//显示表的结构;
+INSERT [INTO] tb_name VALUES('','','');//给表中所有字段赋值
+INSERT tb_name(user,age)VALUES('','');//给所选字段赋值
+SELECT * FROM tb1;//查询表中所有记录；
+CREATE TABLE tb1(id SMALLINT PRIMARY KEY AUTO_INCREMENT,username VARCHAR(20 ) NOT NULL);//创建表。auto_increment一定要和主键一起使用，主键不用和auto_increment一起使用
+CREATE TABLE tb2(id SMALLINT PRIMARY KEY AUTO_INCREMENT ,username VARCHAR(20) UNIQUE KEY);//unique可以有多个
+CREATE TABLE tb3(id SMALLINT PRIMARY KEY AUTO_INCREMENT,username VARCHAR(20) UNIQUE KEY,sex ENUM('1','2','3') DEFAULT '3');//定义enum类型
+
+//存取引擎
+default-stroage-engine 
+
+//建立外键约束
+外键：必须是innodb存取引擎，父表和子表必须有索引。
+CREATE TABLE province(id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT ,pname VARCHAR(20) NOT NULL);
+CREATE TABLE user(id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT ,user VARCHAR(20) NOT NULL ,pid SMALLINT UNSIGNED ,FOREIGN KEY (pid) REFERENCES province (id));//外键中类型id 和pid 要一致，父表是province。
+
+SHOW INDEXES FROM tb1;//显示索引
+
+//增加字段和删除字段和修改字段
+ALTER TABLE USER ADD age SMALLINT UNSIGNED NOT NULL ;//添加一列，可以指定位置
+ALTER TABLE USER ADD（age SMALLINT UNSIGNED NOT NULL ，num SMALLINT UNSIGNED NOT NULL ） ;//添加多列，不能指定位置
+ALTER TABLE USER ADD age SMALLINT UNSIGNED NOT NULL FIRST ;//在第一列添加一列
+ALTER TABLE USER ADD age SMALLINT UNSIGNED NOT NULL AFTER id ;//在id之后添加一列
+ALTER TABLE USER drop age;//删除一列
+ALTER TABLE USER drop age ,drop passwd;//删除多列
+ALTER TABLE user2 modify id smallint unsigned  first;//修改字段类型。位置
+ALTER TABLE user2 CHANGE id new_id bigint unsigned not null ;//修改字段类型，位置和名称
+ALTER TABLE user2 RENAME user3;//修改表名称
+RENAME TABLE user3 TO user2;//修改表名称
+
+//增加删除修改约束
+ALTER TABLE user ADD age SMALLINT UNSIGNED NOT NULL;//增加age属性
+ALTER TABLE user ADD PRIMARY KEY (id);//id增加约束
+ALTER TABLE user ADD FOREIGN KEY (pid) REFERENCES  province (id)；//增加外键约束
+ALTER TABLE user ALTER age SET DEFAULT 15 ;//修改约束
+ALTER TABLE user ALTER age DROP  DEFAULT ;//删除默认约束
+ALTER TABLE user DROP PRIMARY KEY;//删除主键约束
+ALTER TABLE user DROP FOREIGN  KEY user_id;//先通过查询外键约束名称SHOW INDEXES FROM user，再删除外键约束
+ALTER TABLE user DROP INDEX username；//删除索引
+
+//插入数据
+INSERT user VALUES('','',''),VALUES('','','');
+INSERT user SET username='siii' ,password='sss';
+//更新数据
+UPDATE user SET age = age+20,sex=0;
+//删除数据
+DELETE FROM user WHERE id=3；
+//查询数据
+SELECT id FROM user；
+SELECT id as user_id ,username as u_name  FROM user；
+SELECT sex FROM users GROUP BY sex;//指定分组，ASC 升序DESC 降序
+SELECT sex,age FROM user HAVING age>13;
+SELECT sex FROM user HAVING COUNT(id)>=2;//通过having进行分组，条件字段必须出现在查询字段中或者一个聚合函数中
+SELECT * FROM user ORDER BY id DESC,age ASC;
+SELECT * FROM user LIMIT 2；//查询两条记录
+SELECT * FROM user LIMIT 3，2;//偏移值为3，记录是从0开始
+INSERT test SELECT id ,username FROM user WHERE age>=20;//查询年龄大于20的id 和username字段插入到表test中
+
+set names gbk；//客户端设置编码为gbk;
+//子查询
+//比较运算符引发的子查询
+SELECT goods_id,goods_name from tdb_goods WHERE goods_price >(SELECT ROUND(SAG(goods_price))) FROM tdb_goods);
+SELECT goods_id,goods_name from tdb_goods WHERE goods_price >=ANY(SELECT goods_price FROM tdb_goods  WHERE goods_cate="笔记本");//any在大于等于时取子查询中的最小值
+SELECT goods_id,goods_name from tdb_goods WHERE goods_price >=SOME(SELECT goods_price FROM tdb_goods  WHERE goods_cate="笔记本");//some 在大于等于时取子查询中最大值
+SELECT goods_id,goods_name from tdb_goods WHERE goods_price >=ALL(SELECT goods_price FROM tdb_goods  WHERE goods_cate="笔记本");//all 取子查询中的全部值
+//in和not in子查询
+SELECT goods_id,goods_name from tdb_goods WHERE goods_price NOT IN(SELECT goods_price FROM tdb_goods  WHERE goods_cate="笔记本");
+SELECT goods_id,goods_name from tdb_goods WHERE goods_price  IN (SELECT goods_price FROM tdb_goods  WHERE goods_cate="笔记本");
+
+INSERT tdb_goods_cate（cate_name) SELECT goods_cate FROM tdb_goods GROUP BY goods_cate;//子查询插入
+
+UPDATE tdb_goods INNER JOIN tdb_goods_cate ON goods_cate = cate_name SET goods_cate = cate_id ;//，更新表tdb_goods,表tdb_goods参照表tdb_goods_cate，ON是条件，SET是修改值。
+UPDATE tdb_goods AS A INNER JOIN tdb_goods_cate AS B ON A.brand_name= B.brand_name SET A.brand_name = brand_id;//字段重复则应该起别名
+CREATE TABLE tdb_goods_cate（cate_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,cate_name VARCHAR(40) NOT NULL) SELECT  goods_cate FROM tdb_goods GROUP BY goods_cate;//创建数据表的同时去写入查找到的数据
+
+//内连接。仅显示符合连接条件的记录。交集概念
+SELECT goods_name ,goods_id,cate_name FROM tdb_goods INNER JOIN tdb_goods_cate ON tdb_goods.cate_id = tdb_goods_cate.cate_id ;
+//外连接
+SELECT goods_name ,goods_id,cate_name FROM tdb_goods LEFT JOIN tdb_goods_cate ON tdb_goods.cate_id = tdb_goods_cate.cate_id ;//左连接，显示左表的全部
+SELECT goods_name ,goods_id,cate_name FROM tdb_goods RIGHT  JOIN tdb_goods_cate ON tdb_goods.cate_id = tdb_goods_cate.cate_id ;//右连接，显示右表的全部。
+
+
+-- 无限分类的数据表设计
+
+   CREATE TABLE tdb_goods_types(
+     type_id   SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+     type_name VARCHAR(20) NOT NULL,
+     parent_id SMALLINT UNSIGNED NOT NULL DEFAULT 0
+  );
+
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('家用电器',DEFAULT);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电脑、办公',DEFAULT);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('大家电',1);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('生活电器',1);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('平板电视',3);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('空调',3);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电风扇',4);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('饮水机',4);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电脑整机',2);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电脑配件',2);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('笔记本',9);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('超级本',9);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('游戏本',9);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('CPU',10);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('主机',10);
+
+-- 查找所有分类及其父类
+
+  SELECT s.type_id,s.type_name,p.type_name FROM tdb_goods_types AS s LEFT JOIN tdb_goods_types AS  p ON s.parent_id = p.type_id;
+  
+-- 查找所有分类及其子类
+
+  SELECT p.type_id,p.type_name,s.type_name FROM tdb_goods_types AS p LEFT JOIN tdb_goods_types AS  s ON s.parent_id = p.type_id;
+
+-- 查找所有分类及其子类的数目
+
+  SELECT p.type_id,p.type_name,count(s.type_name) AS children_count FROM tdb_goods_types AS p LEFT JOIN tdb_goods_types AS s ON s.parent_id = p.type_id GROUP BY p.type_name ORDER BY p.type_id;
+
+-- 为tdb_goods_types添加child_count字段
+
+  ALTER TABLE tdb_goods_types ADD child_count MEDIUMINT UNSIGNED NOT NULL DEFAULT 0;
+
+-- 将刚才查询到的子类数量更新到tdb_goods_types数据表
+
+  UPDATE tdb_goods_types AS t1 INNER JOIN ( SELECT p.type_id,p.type_name,count(s.type_name) AS children_count FROM tdb_goods_types AS p LEFT JOIN tdb_goods_types AS s ON s.parent_id = p.type_id GROUP BY p.type_name  ORDER BY p.type_id ) AS t2 ON  t1.type_id = t2.type_id  SET t1.child_count = t2.children_count;
+
+
+-- 复制编号为12,20的两条记录
+
+  SELECT * FROM tdb_goods WHERE goods_id IN (19,20);
+
+
+-- INSERT ... SELECT实现复制
+
+  INSERT tdb_goods(goods_name,cate_id,brand_id) SELECT goods_name,cate_id,brand_id FROM tdb_goods WHERE goods_id IN (19,20);
+
+-- 查找重复记录
+
+  SELECT goods_id,goods_name FROM tdb_goods GROUP BY goods_name HAVING count(goods_name) >= 2;
+
+-- 删除重复记录
+
+  DELETE t1 FROM tdb_goods AS t1 LEFT JOIN (SELECT goods_id,goods_name FROM tdb_goods GROUP BY goods_name HAVING count(goods_name) >= 2 ) AS t2  ON t1.goods_name = t2.goods_name  WHERE t1.goods_id > t2.goods_id;
+</pre>
+
+
+									</p>
+								</div>
+							</div>
+							<div class="buttonArea">
+								<!-- <button type="button" class="pull-left btn btn-success"><span class="glyphicon glyphicon-comment"></span></button> -->
+								<button type="button" class=" btn btn-primary show">show</button>
+							</div>
+							
+						</div>
+						<div class="dataArea">
+							<span></span>
+							<h3>2016.3.20</h3>
+							<p>mysql</p>
+						</div>
+					</div>
+					<div class="contentItem">
+						<div class="numArea">
+							<span>7</span>
+						</div>
+						<!-- <span class="dateLine"></span> -->
+						<div class="easyArea">
+							<h3>ajax</h3>
+							<p class="detail">异步传输机制,ajax基础知识。</p>
+							<div class="summary">
+								学习ajax技术。精确步骤以及相关代码实践
+								<div class="textArea hidden">
+									<p>
+<pre>
+步骤： var request = new XMLHttpRequset();
+
+request.open("GET/POST",url,true/false);
+
+request.send();
+
+request.onreadstatechange = function(){        //监听事件
+
+  //  
+
+}
+
+javascript实例：
+
+     var request = new XMLHttpRequest();     
+
+     request.open("GET","service.php?number="+document.getElementById("key").value);
+     request.send();
+     request.onreadystatechange  = function(){
+          if(request.readyState===4){
+
+               if(request.status===200){         
+
+                    //请求成功之后的操作
+
+               }else{
+                    alert('发生错误：'+request.status);
+               }
+          }
+
+     }
+
+document.getElementById("save").onclick = function(){
+     //发送ajax请求
+     var request = new XMLHttpRequest();
+     request.open("POST","service.php");
+     var data = "name="+document.getElementById("staffName").value
+                    +"&number="+document.getElementById("staffNumber").value
+                    +"&sex="+document.getElementById("staffSex").value
+                    +"&job="+document.getElementById("staffJob").value;    
+     request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+     request.send(data);
+     request.onreadystatechange  = function(){
+          if(request.readyState===4){
+               if(request.status===200){
+                    document.getElementById("save-result").innerHTML=request.responseText;
+               }else{
+                    alert('发生错误：'+request.status);
+               }
+          }
+     }
+
+}
+
+jquery实例（jquery中自动封装了ajax）
+
+$(document).ready(function(){
+     $("#search").click(function(){
+          $.ajax({
+               url: 'service.php',
+               type: 'GET',
+               dataType: 'json',
+               data:{
+                    number:$("#key").val()
+               },
+               success:function(data){
+                    if(data.success){
+                         $("#search-result").html(data.msg);
+                    }else{
+                         $("#search-result").html("出现错误"+data.msg);
+                    }
+               },
+               error:function(jqXHR){
+                    alert("发生错误"+jqXHR.status);
+               }
+          });
+     });
+});
+$(document).ready(function(){
+     $("#save").click(function(){
+          $.ajax({
+               url: 'service.php',
+               type: 'POST',
+               dataType: 'json',
+               data:{
+                    name:$("#staffName").val(),
+                    number:$("#staffNumber").val(),
+                    sex:$("#staffSex").val(),
+                    job:$("#staffJob").val()
+               },
+               success:function(data){
+                    if(data.success){
+                         $("#save-result").html(data.msg);
+                    }else{
+                         $("#save-result").html("出现错误"+data.msg);
+                    }
+               },
+               error:function(jqXHR){
+                    alert("发生错误"+jqXHR.status);
+               }
+          });
+     });
+
+});
+
+后台代码：
+
+//设置头文件是html utf-8
+     header("Content-Type:text/plain;charset=utf-8");
+     //header("Content-Type:application/json;charset=utf-8");
+     //header("Content-Type:text/xml;charset=utf-8");
+     //header("Content-Type:text/html;charset=utf-8");
+     //header("Content-Type:application/javascript;charset=utf-8");
+    
+     $staff =array (
+          array("name"=>"红旗","number"=>"101","sex"=>"男","job"=>"总经理"),
+          array("name"=>"李白","number"=>"102","sex"=>"男","job"=>"诗人"),
+          array("name"=>"黄蓉","number"=>"103","sex"=>"女","job"=>"职员")
+         
+     );
+    
+     if($_SERVER['REQUEST_METHOD']=="GET"){
+          search();
+     }elseif($_SERVER['REQUEST_METHOD']=="POST"){
+          create();
+     }
+
+     function search(){
+          if(!isset($_GET['number'])||empty($_GET['number'])){
+               echo "参数错误";
+               return ;
+          }
+          global $staff;
+          $number = $_GET['number'];
+          $result='{"success":false,"msg":"参数错误"}';
+          foreach($staff as $value){
+               if($value["number"]==$number){
+                    $result='{
+                         "success":true,
+                         "msg":"找到员工：员工编号:'.$value["number"].',员工姓名:'.$value["name"].',员工性别:'.$value["sex"].',员工职位:'.$value["job"].'"
+                    }';
+                    break;
+               }
+          }
+          echo $result;
+     }
+     function create(){
+          if(!isset($_POST["name"])||empty($_POST["name"])
+               ||!isset($_POST["sex"])||empty($_POST["sex"])
+               ||!isset($_POST["job"])||empty($_POST["job"])
+               ||!isset($_POST["number"])||empty($_POST["number"])){
+                    echo '{"success":false,
+                              "msg":"数据错误，信息不全"
+                         }';
+                    return ;
+          }
+          echo '{
+               "success":true,
+               "msg":"员工'.$_POST["name"].'信息保存成功"
+          }';
+         
+     }
+</pre>
+
+									</p>
+								</div>
+							</div>
+							<div class="buttonArea">
+								<!-- <button type="button" class="pull-left btn btn-success"><span class="glyphicon glyphicon-comment"></span></button> -->
+								<button type="button" class=" btn btn-primary show">show</button>
+							</div>
+							
+						</div>
+						<div class="dataArea">
+							<span></span>
+							<h3>2016.3.18</h3>
+							<p>ajax</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$(".topButton").click(function(){
+				if($(".siderbar").hasClass('hidden')){
+					$(".siderbar").removeClass('hidden');
+					$(".page-content").removeClass('col-md-8');
+					// $('.easyArea').css('margin-left','40px');
+				}else{
+					$(".siderbar").addClass('hidden');
+					$(".page-content").addClass('col-md-8 ');
+					// $('.easyArea').css('margin-left','15px');
+					
+				}
+			});
+			$(".show").click(function(){
+				// var text = this.parent().siblings().children().value();
+				// alert(text);
+				if($(this).parent().prev('div').find('div').hasClass('hidden')){
+					$(this).parent().prev('div').find('div').removeClass('hidden');
+					$(this).text("close");
+				}else{
+					$(this).parent().prev('div').find('div').addClass('hidden');
+					$(this).text("show");
+				}
+			});
+			$('#weixin').click(function(){
+				if($(this).find('div').hasClass('hidden')){
+					$('.weixin').removeClass('hidden');
+				}else{
+					$('.weixin').addClass('hidden');
+				}
+				
+			});
+		})
+	</script>
+</body>
+</html>

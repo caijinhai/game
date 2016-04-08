@@ -1,0 +1,344 @@
+@charset "utf8";
+body,h1,h2,h3,h4,h5,h6,p ,span,a,dd,dt,dl,a,input,form,pre{margin:0;padding:0;}
+.siderbar{
+	background-color:rgb(101, 101, 101);
+	position:fixed;
+	height:100%;
+}
+.weixin{
+	width:80px;
+	height:80px;
+	position:fixed;
+	bottom:60px;
+	left:105px;
+}
+.weixin img{
+	width:80px;
+}
+.log{
+	height:30px;
+	width:130px;
+	margin:40px 20px 100px;
+	text-align: center;
+}
+.log h3,.log span{
+	font-size: 25px;
+	display:inline-block;
+	line-height: 30px;
+	padding:0 5px;
+	color:#ccc;
+}
+.sideItem{
+	width:190px;
+	height:60px;
+	clear:both;
+	display:block;
+	overflow:hidden;
+	vertical-align: center;
+}
+.imgItem{
+	float:left;
+	width:40px;
+	height:40px;
+	text-align: center;
+
+}
+.imgItem img{
+	height:40px;
+	width:100%;
+	display:inline-block;
+}
+.titleItem{
+	width:130px;
+	margin-left:20px;
+	font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+	text-align:left;
+	float:left;
+	padding-bottom:30px;
+}
+.titleItem .title{
+	width:130px;
+	color:#fff;
+	font-size:16px;
+	line-height: 16px;
+}
+.titleItem p{
+	width:130px;
+	font-size:normal;
+	font-size: 12px;
+	line-height: 12px;
+}
+.sider-footer{
+	padding-top:30px;
+	position:absolute;
+	left:20px;
+	bottom:20px;
+	text-align: center;
+}
+.active{
+	color:#333;
+}
+.page-content{
+	overflow:hidden;
+	background-color:#ccc;
+}
+.pageTop{
+	height:35px;
+	clear:both;
+	display:block;
+}
+.pageTop .topButton{
+	float:left;
+	width:35px;
+	height:35px;
+	text-align: center;
+	padding:10px 10px;
+}
+.topButton span{
+	width:15px;
+	height:15px;
+	display:inline-block;
+}
+.topButton:hover{
+	background-color:#3593C1;
+}
+.pageTop .search-box{
+	float:left;
+	height:35px;
+	width:300px;
+	position:relative;
+}
+.search-form{
+	height:35px;
+	width:300px; 
+}
+.search-input{
+	border:none;
+	padding:5px;
+	height:35px;
+	line-height: 35px;
+	background: transparent;
+    border: none;
+    z-index: 2000;
+    outline:none;
+
+}
+.search-input:focus ,.search-form:focus{
+	border:none;
+
+    position: absolute;
+    top: 0;
+    left: -35px;
+    right:0;
+    font-size: 18px;
+    padding:5px 10px;
+    background:#fff;
+}
+.hidden{
+	display:none;
+}
+.main-content{
+	padding:20px 20px;
+	margin-top:30px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.contentItem{
+	position:relative;
+	margin-left:200px;
+	clear:both;
+}
+.contentItem .numArea{
+	width:30px;
+	height:30px;
+	text-align: center;
+	float:left;
+}
+/*.dateLine{
+	width:2px;
+	border:1px solid #f00;
+	height:90%;
+	float:left;
+	margin-left:-15px;
+}*/
+.numArea span{
+	position:relative;
+	width:24px;
+	height:24px;
+	padding-top:2px;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:50%;
+	background:#000;
+	color:#fff;
+}
+.easyArea{
+	width:95%;
+	padding:0 50px;
+	margin-left:-15px;
+	float:left;
+	border-left:2px solid #f00;
+}
+.easyArea h3{
+	font-size: 35px;
+	height:40px;
+	line-height: 40px;
+	color:blue;
+	font-weight: bold;
+}
+.detail{
+	font-weight: bold;
+	font-size:25px;
+	font-family: normal;
+	padding:10px 5px;
+	line-height: 35px;
+	display:block;
+}
+.summary{
+	font-size:16px;
+	line-height:20px;
+	border:1px solid #ccc;
+	padding:5px 10px;
+	
+}
+.textArea{
+	padding-top: 20px;
+}
+.buttonArea{
+	float:left;
+	line-height: 30px;
+	padding-top:10px;
+	padding-bottom:50px;
+}
+.dataArea{
+	position:absolute;
+	top:10px;
+	left:20px;
+	width:150px;
+	height:90px;
+	margin-left:-194px;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+.dataArea span{
+    display:block;
+    width:0;
+    height:0;
+    border-width:0px 14px 25px 25px;
+    border-style:solid;
+    border-color:transparent transparent transparent #f5f5f5;
+    position:absolute;
+    top:0px;
+    right:-39px;
+}
+.dataArea h3{
+	font-size:25px;
+	height:30px;
+	line-height: 30px;
+	padding:10px 20px;
+}
+.dataArea p{
+	font-size:25px;
+	height:30px;
+	line-height: 30px;
+	padding:10px 20px;
+}
+.title-center{
+	padding:10px 0 25px;
+	text-align: center;
+}
+.imgBox img{
+	padding :10px 10px 15px;
+	background:white;
+	border:1px solid #ddd;
+	box-shadow: 2px 2px 3px rgba(50,50,50,0.4);
+	z-index: 1;
+	transform:all 0.5s ease-in;
+	-webkit-transform:all 0.5s ease-in;
+	-o-transform:all 0.5s ease-in;
+	-moz-transform:all 0.5s ease-in;
+	-ms-transform:all 0.5s ease-in;
+	/*position:absolute;*/
+}
+.imgBox{
+	padding:20px 0px 20px 20px;
+}
+.imgBox img:hover{
+	box-shadow: 15px 15px 20px rgba(50,50,50,0.4);
+	transform:rotate(0deg) scale(1.20);
+	-webkit-transform:rotate(0deg) scale(1.20);
+	-o-transform:rotate(0deg) scale(1.20);
+	-moz-transform:rotate(0deg) scale(1.20);
+	-ms-transform:rotate(0deg) scale(1.20);
+	z-index:2;
+	position:relative;
+}
+.pic{
+	width:160px;
+	float:left;
+}
+.pic1{
+	transform:rotate(-5deg);
+	-webkit-transform:rotate(-5deg);
+	-o-transform:rotate(-5deg);
+	-moz-transform:rotate(-5deg);
+	-ms-transform:rotate(-5deg);
+}
+.pic2{
+	transform:rotate(-20deg);
+	-webkit-transform:rotate(-20deg);
+	-o-transform:rotate(-20deg);
+	-moz-transform:rotate(-20deg);
+	-ms-transform:rotate(-20deg);
+}
+.pic3{
+	transform:rotate(5deg);
+	-webkit-transform:rotate(5deg);
+	-o-transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	-ms-transform:rotate(5deg);
+}
+.pic4{
+	transform:rotate(-10deg);
+	-webkit-transform:rotate(-10deg);
+	-o-transform:rotate(-10deg);
+	-moz-transform:rotate-(10deg);
+	-ms-transform:rotate(-10deg);
+}
+.pic5{
+	transform:rotate(-10deg);
+	-webkit-transform:rotate(-10deg);
+	-o-transform:rotate(-10deg);
+	-moz-transform:rotate(-10deg);
+	-ms-transform:rotate(-10deg);
+}
+.pic6{
+	transform:rotate(10deg);
+	-webkit-transform:rotate(10deg);
+	-o-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	-ms-transform:rotate(10deg);
+}
+.pic7{
+	transform:rotate(20deg);
+	-webkit-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-ms-transform:rotate(20deg);
+}
+.pic8{
+	transform:rotate(5deg);
+	-webkit-transform:rotate(5deg);
+	-o-transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	-ms-transform:rotate(5deg);
+}
+.pic9{
+	transform:rotate(10deg);
+	-webkit-transform:rotate(10deg);
+	-o-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	-ms-transform:rotate(10deg);
+}
